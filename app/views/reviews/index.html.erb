@@ -1,0 +1,8 @@
+<p> Here are the reviews for the restaurant </p>
+<ul>
+  <% @reviews.each do |r| %>
+   <li> <%= r.content %> </li>
+  <% end %>
+</ul>
+<p> <%= link_to "Create a review", restaurants_path %> </p>
+

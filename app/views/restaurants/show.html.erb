@@ -1,0 +1,11 @@
+<p> The new restaurant added is : </p>
+
+<h1> <%= @restaurant.name %></h1>
+<p> <%= @restaurant.category %> </p>
+<ul>
+  <li> <% @restaurant.reviews.each do |review| %> </li>
+  <li> <%= review.content %> -- <%= review.rating %> </li>
+      <% end %>
+</ul>
+
+<p> <%= link_to "Back to all list", restaurants_path %> </p>

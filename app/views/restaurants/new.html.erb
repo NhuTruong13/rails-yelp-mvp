@@ -1,0 +1,18 @@
+<%= simple_form_for(@restaurant) do |r| %>
+  <%= r.label :name %>
+  <%= r.text_field :name %> <br>
+  <%= r.label :address %>
+  <%= r.text_field :address %> <br>
+  <%= r.label :phone_number %>
+  <%= r.text_field :phone_number %> <br>
+  <%= r.label :category %>
+  <%= r.select(:category, options_for_select(
+  [["chinese", "chinese"],
+    ["italian", "italian"],
+    ["japanese", "japanese"],
+    ["french", "french"],
+    ["belgian", "belgian"]
+  ])) %> <br>
+  <%= r.submit %> <br>
+<% end %>
+
